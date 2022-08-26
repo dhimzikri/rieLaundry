@@ -1,6 +1,6 @@
 <p align="center"><img src="https://laravel.com/img/logotype.min.svg" width="400"></p>
 
-## Aplikasi Laundry Sederhana
+## Aplikasi Laundry Sederhana Dengan Laravel 9
 
 Daftar/Register admin dengan url /register-admin. Secret key dapat diubah di env atau default "Secret123".
 
