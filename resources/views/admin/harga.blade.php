@@ -53,7 +53,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="barang">Barang</label>
+                                        <label for="barang">Nama Onderdil</label>
                                         <div class="row">
                                             <div class="col-8">
                                                 <select class="form-control" id="barang" name="barang">
@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="servis">Servis</label>
+                                        <label for="servis">Merk Onderdil</label>
                                         <div class="row">
                                             <div class="col-8">
                                                 <select class="form-control" id="servis" name="servis">
@@ -84,14 +84,14 @@
                                                 <a id="tambah-servis" class="text-white btn btn-primary"
                                                     data-toggle="modal" data-target="#tambahServisModal"><i
                                                         class="fas fa-plus"></i>
-                                                    Servis</a>
+                                                    Merk</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="kategori">Kategori</label>
+                                        <label for="kategori">Kualitas</label>
                                         <select class="form-control" id="kategori" name="kategori">
                                             @foreach ($kategori as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>
@@ -111,11 +111,11 @@
                         <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="kiloan-tab" data-toggle="tab" href="#kiloan" role="tab"
-                                    aria-controls="kiloan" aria-selected="true">Kiloan</a>
+                                    aria-controls="kiloan" aria-selected="true">Original</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="satuan-tab" data-toggle="tab" href="#satuan" role="tab"
-                                    aria-controls="satuan" aria-selected="false">Satuan</a>
+                                    aria-controls="satuan" aria-selected="false">KW</a>
                             </li>
                         </ul>
                         <div class="tab-content mt-3" id="myTabContent">
@@ -126,7 +126,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Barang</th>
-                                            <th>Servis</th>
+                                            <th>Merk</th>
                                             <th>Harga</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -154,7 +154,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Barang</th>
-                                            <th>Servis</th>
+                                            <th>Merk</th>
                                             <th>Harga</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                         <hr>
-                        <h5 class="mt-3">Daftar Tipe Service</h5>
+                        {{-- <h5 class="mt-3">Daftar Tipe Service</h5>
                         <div class="tab-content mt-3" id="myTabContent">
                             <table id="tbl-kiloan" class="table dataTable dt-responsive nowrap" style="width:100%">
                                 <thead class="thead-light">
@@ -205,7 +205,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
