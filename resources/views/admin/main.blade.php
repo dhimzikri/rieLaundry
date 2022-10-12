@@ -108,13 +108,14 @@
                                 <i class="nav-icon fas fa-star"></i>
                                 <p>Voucher</p>
                             </a>
-                        </li>                        {{-- <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                             <a href="{{url('admin/saran')}}"
                                 class="nav-link {{(request()->is('admin/saran')) ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-sticky-note"></i>
                                 <p>Saran / Komplain</p>
                             </a>
-                        </li> --}}
+                        </li>
                         <li class="nav-item">
                             <a href="{{url('admin/laporan')}}"
                                 class="nav-link {{(request()->is('admin/laporan')) ? 'active' : ''}}">
