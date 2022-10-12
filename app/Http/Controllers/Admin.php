@@ -376,7 +376,7 @@ class Admin extends Controller
         if (PriceList::where([
             'item_id' => $request->input('barang'),
             'category_id' => $request->input('kategori'),
-            'service_id' => $request->input('servis')
+            'service_id' => $request->input('servis'),
         ])->exists()) {
             return redirect('admin/harga')->with('error', 'Harga tidak dapat ditambah karena sudah tersedia!');
         }
@@ -385,7 +385,8 @@ class Admin extends Controller
             'item_id' => $request->input('barang'),
             'category_id' => $request->input('kategori'),
             'service_id' => $request->input('servis'),
-            'price' => $request->input('harga')
+            'price' => $request->input('harga'),
+            'price_jual' => $request->input('harga'),
         ]);
         $price_list->save();
 

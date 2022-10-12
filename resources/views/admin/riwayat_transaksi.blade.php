@@ -63,7 +63,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="mb-3">Transaksi Berjalan (Priority Service)</h4>
+                        <h4 class="mb-3">Transaksi Berjalan</h4>
                         <table id="tbl-transaksi-priority" class="table dt-responsive nowrap" style="width: 100%">
                             <thead class="thead-light">
                                 <tr>
@@ -108,13 +108,44 @@
                                     </td>
                                 </tr>
                                 @endforeach
+                                @foreach ($ongoing_transaction as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>{{date('d F Y', strtotime($item->created_at))}}</td>
+                                    <td>{{$item->member->name}}</td>
+                                    <td>
+                                        @if ($item->status_id == 3)
+                                        <span class="text-success">Selesai</span>
+                                        @else
+                                        <select name="" id="status" data-id="{{$item->id}}"
+                                            data-val="{{$item->status_id}}" class="select-status">
+                                            @foreach ($status as $s)
+                                            @if ($item->status_id == $s->id)
+                                            <option selected value="{{$s->id}}">{{$s->name}}</option>
+                                            @else
+                                            <option value="{{$s->id}}">{{$s->name}}</option>
+                                            @endif
+                                            @endforeach
+                                        </select>
+                                        @endif
+                                    </td>
+                                    <td>{{$item->service_cost}}</td>
+                                    <td>{{$item->total}}</td>
+                                    <td>
+                                        <a href="#" class="badge badge-info btn-detail" data-toggle="modal"
+                                            data-target="#detailTransaksiModal" data-id="{{$item->id}}">Detail</a>
+                                        <a href="{{url('admin/cetak-transaksi') . '/' . $item->id}}"
+                                            class="badge badge-primary" target="_blank">Cetak</a>
+                                    </td>
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
@@ -168,7 +199,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row">
             <div class="col-12">
                 <div class="card">

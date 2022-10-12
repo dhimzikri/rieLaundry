@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="barang" class="col-sm-2 col-form-label">Barang</label>
+                                <label for="barang" class="col-sm-2 col-form-label">Jenis</label>
                                 <div class="col-sm-4">
                                     <select class="form-control" id="barang" name="barang">
                                         @foreach ($barang as $item)
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="servis" class="col-sm-2 col-form-label">Servis</label>
+                                <label for="servis" class="col-sm-2 col-form-label">Merk</label>
                                 <div class="col-sm-4">
                                     <select class="form-control" id="servis" name="servis">
                                         @foreach ($servis as $item)
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
+                                <label for="kategori" class="col-sm-2 col-form-label">Kualitas</label>
                                 <div class="col-sm-4">
                                     <select class="form-control" id="kategori" name="kategori">
                                         @foreach ($kategori as $item)
@@ -116,9 +116,9 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th>No</th>
-                                    <th>Barang</th>
-                                    <th>Servis</th>
-                                    <th>Kategori</th>
+                                    <th>Jenis</th>
+                                    <th>Merk</th>
+                                    <th>Kualitas</th>
                                     <th>Banyak</th>
                                     <th>Harga</th>
                                     <th>Aksi</th>

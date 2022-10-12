@@ -104,14 +104,15 @@ class Admin_model extends Model
             ->get();
     }
 
-    public static function tambahHarga($barang, $kategori, $servis, $harga)
+    public static function tambahHarga($barang, $kategori, $servis, $harga_beli, $harga_jual)
     {
         DB::table('daftar_harga')->insert([
             'id_harga' => null,
             'id_barang' => $barang,
             'id_kategori' => $kategori,
             'id_servis' => $servis,
-            'harga' => $harga
+            'harga_beli' => $harga_beli,
+            'harga_jual' => $harga_jual,
         ]);
     }
 
